@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   frog:
-    specifier: latest
-    version: 0.16.0(@types/node@14.18.33)(hono@4.5.4)(typescript@5.5.4)
+    specifier: 0.15.0
+    version: 0.15.0(@types/node@14.18.33)(hono@4.5.5)(typescript@5.5.4)
   hono:
     specifier: ^4.5.4
-    version: 4.5.4
+    version: 4.5.5
 
 devDependencies:
   tsx:
@@ -507,13 +507,13 @@ packages:
     engines: {node: '>=18.14.1'}
     dev: false
 
-  /@hono/valibot-validator@0.3.0(hono@4.5.4)(valibot@0.31.1):
+  /@hono/valibot-validator@0.3.0(hono@4.5.5)(valibot@0.31.1):
     resolution: {integrity: sha512-EcGJKzLt11SK4K11yKHrhI93ECtKeSHAnnENHw5tCL0ZhyDIx96avc3Ua8/ri4fwVvRPuOzFQ2OBRsVvwZuqeQ==}
     peerDependencies:
       hono: '>=3.9.0'
       valibot: '>=0.31.0 <1'
     dependencies:
-      hono: 4.5.4
+      hono: 4.5.5
       valibot: 0.31.1
     dev: false
 
@@ -1694,8 +1694,8 @@ packages:
     dependencies:
       to-regex-range: 5.0.1
 
-  /frog@0.16.0(@types/node@14.18.33)(hono@4.5.4)(typescript@5.5.4):
-    resolution: {integrity: sha512-wkrmDalIYX7IBwqEqZuITyt8x8Igs5dQLWwsQQ5vHHQDM3meQ8Iy7OFbN7ENZc42KXqKCux6J+pSxru09iGWqA==}
+  /frog@0.15.0(@types/node@14.18.33)(hono@4.5.5)(typescript@5.5.4):
+    resolution: {integrity: sha512-wQYEpdyBZZ0ozN5dLYmvdKRdGayhtT1sGST6vY7gooqQmUeYXSTKDZUIsrn2UHmU31YG3K4piUkagwjQRUphkw==}
     hasBin: true
     peerDependencies:
       hono: ^4.4.4
@@ -1706,7 +1706,7 @@ packages:
     dependencies:
       '@bufbuild/protobuf': 1.10.0
       '@hono/node-server': 1.12.0
-      '@hono/valibot-validator': 0.3.0(hono@4.5.4)(valibot@0.31.1)
+      '@hono/valibot-validator': 0.3.0(hono@4.5.5)(valibot@0.31.1)
       '@noble/curves': 1.5.0
       '@noble/hashes': 1.4.0
       cac: 6.7.14
@@ -1715,8 +1715,8 @@ packages:
       dom-parser: 1.1.5
       fast-glob: 3.3.2
       fs-extra: 11.2.0
-      hono: 4.5.4
-      hono-og: 0.0.27(hono@4.5.4)
+      hono: 4.5.5
+      hono-og: 0.0.27(hono@4.5.5)
       jose: 5.6.3
       lz-string: 1.5.0
       path-browserify: 1.0.1
@@ -1862,18 +1862,18 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  /hono-og@0.0.27(hono@4.5.4):
+  /hono-og@0.0.27(hono@4.5.5):
     resolution: {integrity: sha512-FtsUmDCG7xKXD8InxzHcdzX5IIe9MrDPFHih0CUd6Hog0NcDV6tksc1cZ1sAAuftSTedmC4LV6Oi1uK6VXvZgQ==}
     peerDependencies:
       hono: '>=3'
     dependencies:
       '@vercel/og': 0.6.2
-      hono: 4.5.4
+      hono: 4.5.5
       workers-og: 0.0.24
     dev: false
 
-  /hono@4.5.4:
-    resolution: {integrity: sha512-k2IguJfRgNCpDbAfpxk+o+fZBLFHl4+eIZUpjc1ItZWHeZ37SmT3efA1UpkIaC0hSf1NJg0E79/wWn6g9LQ4Cw==}
+  /hono@4.5.5:
+    resolution: {integrity: sha512-fXBXHqaVfimWofbelLXci8pZyIwBMkDIwCa4OwZvK+xVbEyYLELVP4DfbGaj1aEM6ZY3hHgs4qLvCO2ChkhgQw==}
     engines: {node: '>=16.0.0'}
     dev: false
 
