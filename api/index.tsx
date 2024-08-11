@@ -20,6 +20,7 @@ export const app = new Frog({
 app.frame('/', (c) => {
   const { buttonValue, inputText, status } = c;
   const fruit = inputText || buttonValue;
+  console.log(status);
   return c.res({
     image: (
       <div
@@ -54,7 +55,7 @@ app.frame('/', (c) => {
       </div>
     ),
     intents: [
-      // <TextInput placeholder="Enter custom fruit..." />,
+      <TextInput placeholder="Enter custom fruit..." />,
       <Button value="apples">Apples</Button>,
       <Button value="oranges">Oranges</Button>,
       <Button value="bananas">Bananas</Button>,
