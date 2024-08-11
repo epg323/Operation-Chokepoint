@@ -22,6 +22,7 @@ app.frame('/', (c) => {
   const fruit = inputText || buttonValue;
   console.log(status);
   return c.res({
+    action: '/character',
     image: (
       <div
         style={{
@@ -37,30 +38,37 @@ app.frame('/', (c) => {
           width: '100%',
         }}
       >
-        <div
-          style={{
-            color: 'white',
-            fontSize: 60,
-            fontStyle: 'normal',
-            letterSpacing: '-0.025em',
-            lineHeight: 1.4,
-            marginTop: 30,
-            padding: '0 120px',
-            whiteSpace: 'pre-wrap',
-            fontFamily: 'Open Sans',
-          }}
-        >
-          {status === 'response' ? `Nice choice.${fruit ? ` ${fruit.toUpperCase()}!!` : ''}` : 'Welcome!'}
-        </div>
+        <img src="/intro_banner.png" />
       </div>
     ),
-    intents: [
-      <TextInput placeholder="Enter custom fruit..." />,
-      <Button value="apples">Apples</Button>,
-      <Button value="oranges">Oranges</Button>,
-      <Button value="bananas">Bananas</Button>,
-      status === 'response' && <Button.Reset>Reset</Button.Reset>,
-    ],
+    intents: [<Button>Reveal Your Allegiance</Button>],
+  });
+});
+
+app.frame('/character', (c) => {
+  const { buttonValue, inputText, status } = c;
+  const isPunk = Math.random() > 0.5;
+  return c.res({
+    action: 'gameplay',
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background: status === 'response' ? 'linear-gradient(to right, #432889, #17101F)' : 'black',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+        }}
+      >
+        <img src={isPunk ? '/punk.png' : '/fed.png'} />
+      </div>
+    ),
+    intents: [<Button>Play</Button>],
   });
 });
 
