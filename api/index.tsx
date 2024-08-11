@@ -19,8 +19,6 @@ export const app = new Frog({
 
 app.frame('/', (c) => {
   const { buttonValue, inputText, status } = c;
-  const fruit = inputText || buttonValue;
-  console.log(status);
   return c.res({
     action: '/character',
     image: (
@@ -49,7 +47,7 @@ app.frame('/character', (c) => {
   const { buttonValue, inputText, status } = c;
   const isPunk = Math.random() > 0.5;
   return c.res({
-    action: 'gameplay',
+    // action: 'gameplay',
     image: (
       <div
         style={{
